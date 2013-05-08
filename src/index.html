@@ -1,13 +1,134 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Nancy Smith Acupuncture in Frederick, MD | Call (301) 606-2185 to schedule an appointment
+
+carousel:
+    - image: img/slides/foot.jpg
+      alt: Foot
+      title: About acupuncture
+      caption: >
+        Acupuncture is the oldest continuously practiced medical system in the
+        world and is used by one third of the world’s population as a primary
+        health care system.  Because of its relatively low cost and its
+        noninvasive nature, acupuncture has become a highly popular form of
+        complementary health.
+    - image: img/slides/back.jpg
+      alt: A woman's back
+      title: Benefits of acupuncture
+      caption: >
+        Acupuncture is often effective with a wide range of complaints,
+        including chronic fatigue, depression, back pain, joint pain,
+        infertility, asthma, addictions, trauma symptoms and stress.
+        Acupuncture is also helpful for many chronic illnesses and health
+        concerns that have no clear origin or cause.
+    - image: img/slides/needle.jpg
+      alt: Acupuncture needle
+      title: Treatment experience
+      caption: >
+        The first appointment is typically a two-hour consultation.  During this
+        visit we will speak at length about your health concerns and address any
+        questions you may have about acupuncture and the healing process. We
+        will also discuss your health and personal histories in detail, followed
+        by a physical examination. The primary objective of the first
+        appointment is to assess the underlying conditions that have led to your
+        current concerns.
+    - image: img/slides/profile.jpg
+      alt: Nancy Smith
+      title: Practioner profile
+      caption:
+        Nancy Smith, RN, M.Ac., L.Ac., Somatic Experiencing
+        Practitioner&trade;, Licensed Acupuncturist, Retired Registered Nurse
+        with extensive clinical experience. Five Element Acupuncture helped me
+        through some health challenges, so I wanted to share this way to
+        access one’s own healing resources. Therefore, even though I had a
+        good career as a nurse, I became an acupuncturist.
+
+testimonials:
+    - text: >
+        Nancy, this experience has made me more aware of myself and my place
+        in the universe
+      initials: S.M.
+    - text: >
+        The physical improvements after these sessions have been relief of
+        chronic knee pain from an old injury, an increased peak flow and no
+        exacerbations of asthma for the first time in 2 years. In general felt
+        as though I had a whole body tune up as well as a lightening up of an
+        often too serious mind.
+      initials: C.M.
+    - text: >
+        I believe the acupuncture is helping me become stronger in all of the
+        aspects of my life…
+      initials: S.G.
+    - text: >
+        Nancy listens and takes the time to understand your needs. She is very
+        compassionate, knowledgeable, and is always full of encouragement.
+        Nancy has a passion for her work, and I look forward to my
+        appointments. Because of Nancy, acupuncture has become a mainstay in
+        my life.
+      initials: D.L.
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-slide-to="0" data-target="#myCarousel" class="active"></li>
+        <li data-slide-to="1" data-target="#myCarousel"></li>
+        <li data-slide-to="2" data-target="#myCarousel"></li>
+        <li data-slide-to="3" data-target="#myCarousel"></li>
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        {% for item in page.carousel %}
+        <div class="item{% if forloop.index0 == 0 %} active{% endif %}">
+            <img src="{{ item.image }}" alt="{{ item.alt }}" />
+            <div class="carousel-caption">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.caption }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Carousel nav -->
+    <a data-slide="prev" href="#myCarousel" class="carousel-control left">&lsaquo;</a>
+    <a data-slide="next" href="#myCarousel" class="carousel-control right">&rsaquo;</a>
+</div>
+
+<p class="lead">Traditional Five Element Acupuncture is a powerful system
+of medicine designed to address patients on a body, mind and spirit level.
+Practiced for over 3000 years in China, the benefit of acupuncture
+treatment is now clearly recognized and well documented in western medical
+journals and in medical institutions across the United States. Because of
+its relatively low cost and its noninvasive nature, acupuncture has become
+a highly popular form of complementary health care. In this gentle form of
+medicine, each treatment is designed uniquely to address imbalance as it
+is specifically experienced by each individual.</p>
+
+<div class="testimonials">
+    <h3>Client testimonials</h3>
+    <div class="row">
+        {% for t in page.testimonials %}
+        <span class="span3">
+            <blockquote>
+                <p>{{ t.text }}</p>
+                <small>{{ t.initials }}</small>
+            </blockquote>
+        </span>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="recent-posts">
+    <div class="row">
+        <div class="span4">
+            <h4>Recent blog posts</h4>
+            <p>Read the latest from my wellness blog</p>
+        </div>
+        {% for post in site.posts limit:2 %}
+        <div class="span4">
+            <h5>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h5>
+            <p>{{ post.excerpt }}</p>
+        </div>
+        {% endfor %}
+    </div>
 </div>

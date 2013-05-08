@@ -1,0 +1,99 @@
+---
+---
+@bodybg: #90AEC2;
+
+body {
+    font-family: 'Droid Sans', Arial, sans-serif;
+    background-color: @bodybg;
+    background-image: url("../img/body-bg16.png");
+    color: #414141;
+}
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.hide-text () {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.header {
+    background: url("../img/top-bg.png") repeat-x left bottom,
+                url("../img/header-image.png") top right no-repeat;
+    padding-top: 15px;
+    min-height: 260px;
+    position: relative;
+}
+
+.masthead {
+    padding-left: 180px;
+    background: url("../img/spiral.png") left top no-repeat;
+    height: 250px;
+    a {
+        display: block;
+        .hide-text;
+        background: url("../img/logo.png");
+        min-height: 93px;
+        width: 310px;
+    }
+    p {
+        float: right;
+        margin-right: 180px;
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 1),
+                     -1px -1px 5px rgba(0, 0, 0, .6);
+        font-style: italic;
+        font-family: Georgia, serif;
+        font-size: 15.5px;
+    }
+}
+
+.gradient (@origin: left, @start: #ffffff; @stop: #000000) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+
+.navbar-wrapper {
+    position: absolute;
+    top: 135px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding-left: 180px;
+    .navbar {
+        margin-right: 180px;
+        .navbar-inner {
+            .gradient(top, #7d7d7d, #4F4F4F);
+            border-color: #2B3338;
+            .nav {
+                > li {
+                    > a {
+                        color: #fff;
+                        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    background: url("../img/content-bg.png");
+}
+
+footer {
+    background: url("../img/footer-topbg.png") repeat-x;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    a {
+        color: #ffffff;
+        &:hover {
+            color: #eeeeee;
+            text-decoration: none;
+        }
+    }
+}
