@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Conditions treated by acupuncture
 ---
 The World Health Organization recognizes the ability of acupuncture and traditional Oriental medicine  to treat over 43 common disorders including:

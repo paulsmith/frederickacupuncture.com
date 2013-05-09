@@ -2,7 +2,7 @@
 layout: page
 title: Practitioner profile
 ---
-**Nancy Smith, RN, M.Ac., L.Ac., LLC**  
+![Nancy Smith](/img/slides/profile.jpg) **Nancy Smith, RN, M.Ac., L.Ac., LLC**  
 Somatic Experiencing Practitioner TM
 
  * Licensed Acupuncturist

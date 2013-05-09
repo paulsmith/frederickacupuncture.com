@@ -3,7 +3,7 @@ layout: page
 title: Benefits of acupuncture
 ---
 
-Acupuncture is often effective with a wide range of complaints, including
+![A woman's back](/img/slides/back.jpg) Acupuncture is often effective with a wide range of complaints, including
 chronic fatigue, depression, back pain, joint pain, infertility, asthma,
 addictions, trauma symptoms and stress. Acupuncture is also helpful for many
 chronic illnesses and health concerns that have no clear origin or cause.

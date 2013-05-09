@@ -1,6 +1,6 @@
 ---
-layout: default
-title: about-somatic-experiencing-tm
+layout: page
+title: About Somatic Experiencing&trade;
 ---
 When appropriate, and with your interest and informed consent I may use
 Somatic Experiencing (SE) in our work together.  SE is a short-term
