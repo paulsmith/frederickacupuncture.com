@@ -1,2 +1,3 @@
 name: Frederick Acupuncture
 markdown: redcarpet
+permalink: /:year/:month/:title.html

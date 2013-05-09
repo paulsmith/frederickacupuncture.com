@@ -3,47 +3,6 @@ layout: default
 title: Nancy Smith Acupuncture in Frederick, MD | Call (301) 606-2185 to schedule an appointment
 type: homepage
 
-carousel:
-    - image: img/slides/foot.jpg
-      alt: Foot
-      title: About acupuncture
-      caption: >
-        Acupuncture is the oldest continuously practiced medical system in the
-        world and is used by one third of the world’s population as a primary
-        health care system.  Because of its relatively low cost and its
-        noninvasive nature, acupuncture has become a highly popular form of
-        complementary health.
-    - image: img/slides/back.jpg
-      alt: A woman's back
-      title: Benefits of acupuncture
-      caption: >
-        Acupuncture is often effective with a wide range of complaints,
-        including chronic fatigue, depression, back pain, joint pain,
-        infertility, asthma, addictions, trauma symptoms and stress.
-        Acupuncture is also helpful for many chronic illnesses and health
-        concerns that have no clear origin or cause.
-    - image: img/slides/needle.jpg
-      alt: Acupuncture needle
-      title: Treatment experience
-      caption: >
-        The first appointment is typically a two-hour consultation.  During this
-        visit we will speak at length about your health concerns and address any
-        questions you may have about acupuncture and the healing process. We
-        will also discuss your health and personal histories in detail, followed
-        by a physical examination. The primary objective of the first
-        appointment is to assess the underlying conditions that have led to your
-        current concerns.
-    - image: img/slides/profile.jpg
-      alt: Nancy Smith
-      title: Practioner profile
-      caption:
-        Nancy Smith, RN, M.Ac., L.Ac., Somatic Experiencing
-        Practitioner&trade;, Licensed Acupuncturist, Retired Registered Nurse
-        with extensive clinical experience. Five Element Acupuncture helped me
-        through some health challenges, so I wanted to share this way to
-        access one’s own healing resources. Therefore, even though I had a
-        good career as a nurse, I became an acupuncturist.
-
 testimonials:
     - text: >
         Nancy, this experience has made me more aware of myself and my place
@@ -68,30 +27,6 @@ testimonials:
         my life.
       initials: D.L.
 ---
-
-<div id="myCarousel" class="carousel slide">
-    <ol class="carousel-indicators">
-        <li data-slide-to="0" data-target="#myCarousel" class="active"></li>
-        <li data-slide-to="1" data-target="#myCarousel"></li>
-        <li data-slide-to="2" data-target="#myCarousel"></li>
-        <li data-slide-to="3" data-target="#myCarousel"></li>
-    </ol>
-    <!-- Carousel items -->
-    <div class="carousel-inner">
-        {% for item in page.carousel %}
-        <div class="item{% if forloop.index0 == 0 %} active{% endif %}">
-            <img src="{{ item.image }}" alt="{{ item.alt }}" />
-            <div class="carousel-caption">
-                <h4>{{ item.title }}</h4>
-                <p>{{ item.caption }}</p>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    <!-- Carousel nav -->
-    <a data-slide="prev" href="#myCarousel" class="carousel-control left">&lsaquo;</a>
-    <a data-slide="next" href="#myCarousel" class="carousel-control right">&rsaquo;</a>
-</div>
 
 <div class="row">
     <div class="span9">
