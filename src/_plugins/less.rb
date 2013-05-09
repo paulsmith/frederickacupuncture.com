@@ -12,7 +12,7 @@ module Jekyll
 
         def convert(content)
             begin
-                stdin, stdout, wait_thr = Open3.popen2("lessc -")
+                stdin, stdout, stderr, wait_thr = Open3.popen2("lessc -")
                 stdin.puts(content)
                 stdin.close
                 output = stdout.read
