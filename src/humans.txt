@@ -3,13 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Paul Smith @paulsmith
 
 # THANKS
 
-    <name>
+    Shawn Beatty
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    Jekyll, Less.js, S3 static hosting
