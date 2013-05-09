@@ -12,12 +12,13 @@ module Jekyll
 
         def convert(content)
             begin
-                stdin, stdout, wait_thr = Open3.popen2("lessc -")
+                stdin, stdout, stderr = Open3.popen3("lessc -")
                 stdin.puts(content)
                 stdin.close
                 output = stdout.read
-                wait_thr.value
-                output
+                stdout.close
+		stderr.close
+		output
             rescue => e
                 puts "Error converting .less: #{e.message}"
             end
