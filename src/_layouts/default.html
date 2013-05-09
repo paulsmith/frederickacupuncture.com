@@ -140,20 +140,26 @@ carousel:
         </div>
     </div>
     <footer>
-        <div class="container">
+        <div class="container" itemscope itemtype="http://schema.org/Person">
             <a href="/practitioner-profile">
                 <address class="image practitioner">
-                    <strong>Nancy Smith RN, M.Ac.</strong><br>
-                    Licensed Acupunturist, LLC<br>
+                    <strong>
+                        <span itemprop="name">Nancy Smith</span>
+                        <span itemprop="honorificSuffix">RN, M.Ac.</span>
+                    </strong><br>
+                    <span itemprop="jobTitle">Licensed Acupunturist</span>, LLC<br>
                     Somatic Experiencing&trade;
                 </address>
             </a>
 
             <a href="/location-and-directions">
-                <address class="image location">
-                    723 N. Market Street<br>
-                    Frederick, MD 21701<br>
-                    <abbr title="Phone">P:</abbr> (301) 606-2185
+                <address class="image location" itemprop="address" itemscope itemtype="http://schema.org://PostalAddress">
+                    <span itemprop="streetAddress">723 N. Market Street</span><br>
+                    <span itemprop="addressLocality">Frederick</span>,
+                    <span itemprop="addressRegion">MD</span>
+                    <span itemprop="postalCode">21701</span><br>
+                    <abbr title="Phone">P:</abbr>
+                    <span itemprop="telephone">(301) 606-2185</span>
                 </address>
             </a>
         </div>
