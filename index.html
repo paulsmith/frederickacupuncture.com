@@ -1,0 +1,82 @@
+---
+layout: default
+title: Nancy Smith Acupuncture in Frederick, MD | Call (301) 606-2185 to schedule an appointment
+type: homepage
+
+testimonials:
+  - text: >
+      Nancy, this experience has made me more aware of myself and my place
+      in the universe
+    initials: S.M.
+  - text: >
+      The physical improvements after these sessions have been relief of
+      chronic knee pain from an old injury, an increased peak flow and no
+      exacerbations of asthma for the first time in 2 years. In general felt
+      as though I had a whole body tune up as well as a lightening up of an
+      often too serious mind.
+    initials: C.M.
+  - text: >
+      I believe the acupuncture is helping me become stronger in all of the
+      aspects of my life…
+    initials: S.G.
+  - text: >
+      Nancy listens and takes the time to understand your needs. She is very
+      compassionate, knowledgeable, and is always full of encouragement.
+      Nancy has a passion for her work, and I look forward to my
+      appointments. Because of Nancy, acupuncture has become a mainstay in
+      my life.
+    initials: D.L.
+---
+
+<div class="row">
+  <div class="span9">
+    <p class="lead explanation">
+      Traditional Five Element Acupuncture is a powerful system of medicine
+      designed to address patients on a body, mind and spirit level. Practiced
+      for over 3000 years in China, the benefit of acupuncture treatment is now
+      clearly recognized and well documented in western medical journals and in
+      medical institutions across the United States. Because of its relatively
+      low cost and its noninvasive nature, acupuncture has become a highly
+      popular form of complementary health care. In this gentle form of
+      medicine, each treatment is designed uniquely to address imbalance as it
+      is specifically experienced by each individual.
+    </p>
+  </div>
+  <div class="span3">
+    <img src="/img/nancyhome.jpg" alt="Spring and winter split view" />
+  </div>
+</div>
+
+<div class="testimonials">
+  <h3>Client testimonials</h3>
+  <div class="row">
+    {% for t in page.testimonials %}
+    <span class="span3">
+      <blockquote>
+        <p>{{ t.text }}</p>
+        <small>{{ t.initials }}</small>
+      </blockquote>
+    </span>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="recent-posts">
+  <div class="row">
+    <div class="span2 intro">
+      <div class="inner">
+        <h4>Recent blog posts</h4>
+        <p>Read the latest from my wellness blog</p>
+      </div>
+    </div>
+    {% for post in site.posts limit:2 %}
+    <div class="span5 post">
+      <div class="date">{{ post.date | date_to_string }}</div>
+      <h5>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h5>
+      <p>{{ post.excerpt }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>

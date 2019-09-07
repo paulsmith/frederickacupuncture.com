@@ -1,3 +1,7 @@
-source "http://rubygems.org"
-gem "jekyll", "1.0.1"
-gem "redcarpet"
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+gem "jekyll"

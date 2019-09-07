@@ -1,0 +1,220 @@
+---
+---
+
+$bodybg: #90aec2;
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: 'Droid Sans', Arial, sans-serif;
+  background-color: $bodybg;
+  background-image: url('../img/body-bg16.png');
+  color: #414141;
+}
+
+.header {
+  background: url('../img/top-bg.png') left bottom repeat-x,
+    url('../img/header-image.png') top right no-repeat,
+    url('../img/spiral.png') left top no-repeat;
+  padding-top: 15px;
+  min-height: 260px;
+
+  .masthead {
+    a {
+      display: block;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      background: url('../img/logo.png');
+      min-height: 93px;
+      width: 310px;
+    }
+    p {
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 1),
+        -1px -1px 5px rgba(0, 0, 0, 0.6);
+      font-style: italic;
+      font-family: Georgia, serif;
+      font-size: 15.5px;
+    }
+  }
+
+  .title {
+    h1 {
+      font-weight: normal;
+      color: #ffffff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      margin-bottom: 6px;
+    }
+  }
+
+  .carousel {
+    img {
+      border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.3);
+      -webkit-box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+      -o-box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+      -ms-box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.3);
+      padding: 5px;
+    }
+    .carousel-caption {
+      width: 350px;
+      left: 503px;
+      top: 0;
+      background: transparent;
+    }
+    .item {
+      padding-left: 80px;
+    }
+  }
+}
+
+.navbar-wrapper {
+  .navbar {
+    .navbar-inner {
+      background-color: #7d7d7d;
+      background-image: -webkit-linear-gradient(top, #7d7d7d, #4f4f4f);
+      background-image: -moz-linear-gradient(top, #7d7d7d, #4f4f4f);
+      background-image: -o-linear-gradient(top, #7d7d7d, #4f4f4f);
+      background-image: -ms-linear-gradient(top, #7d7d7d, #4f4f4f);
+      background-image: linear-gradient(top, #7d7d7d, #4f4f4f);
+      border-color: #2b3338;
+      .nav {
+        display: table;
+        > li {
+          display: table-cell;
+          width: 1%;
+          float: none;
+          > a {
+            padding: 10px 0;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+            font-size: 12px;
+            &:hover {
+              color: #e0d6af;
+            }
+          }
+          border-right: 1px solid rgba(0, 0, 0, 0.1);
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  background: url('../img/content-bg.png');
+  padding: 40px 0 50px 0;
+  p:first-child {
+    img:first-child {
+      float: left;
+      margin-right: 15px;
+    }
+  }
+}
+
+p.explanation {
+  font-style: italic;
+  margin-right: 15px;
+}
+
+.sidebar {
+  h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ababab;
+    text-shadow: 1px 1px 1px #ffffff;
+  }
+  ul {
+    li {
+      background: url('../img/sidebar-bullet.png') no-repeat 0 7px;
+      padding: 0 0 3px 13px;
+    }
+  }
+}
+
+footer {
+  background: url('../img/footer-topbg.png') repeat-x;
+  padding: 40px 0;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  a {
+    color: #ffffff;
+    &:hover {
+      color: #eeeeee;
+      text-decoration: none;
+    }
+  }
+  address {
+    &.image {
+      float: left;
+      margin-right: 15px;
+      padding-left: 115px;
+      background-repeat: no-repeat;
+      height: 109px;
+    }
+    &.practitioner {
+      background-image: url('../img/footer-nancy-smith.png');
+    }
+    &.location {
+      background-image: url('../img/footer-map.png');
+    }
+  }
+}
+
+.testimonials {
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: grey;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px white;
+  }
+  blockquote {
+    p {
+      font-size: 14px;
+      font-style: italic;
+      text-indent: -0.4em;
+      &:before {
+        content: '“';
+      }
+      &:after {
+        content: '”';
+      }
+    }
+  }
+}
+
+.recent-posts {
+  .intro {
+    font-style: italic;
+    h4 {
+      font-weight: normal;
+      color: grey;
+    }
+    .inner {
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+  .post {
+    .date {
+      font-style: italic;
+      font-size: smaller;
+    }
+    h5 {
+      text-transform: uppercase;
+    }
+    a {
+      color: #ababab;
+    }
+  }
+}
