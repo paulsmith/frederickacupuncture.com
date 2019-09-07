@@ -1,36 +1,37 @@
 ---
 layout: default
 links:
-    - title: About Somatic Experiencing&trade;
-      href: /about-somatic-experiencing-tm
-    - title: Conditions treated by acupuncture
-      href: /conditions
-    - title: Patient testimonials
-      href: /testimonials
-    - title: Patient documents and resources
-      href: /patient-documents-and-resources
-    - title: Frequently asked questions
-      href: /faq
+  - title: About Somatic Experiencing&trade;
+    href: /about-somatic-experiencing-tm
+  - title: Conditions treated by acupuncture
+    href: /conditions
+  - title: Patient testimonials
+    href: /testimonials
+  - title: Patient documents and resources
+    href: /patient-documents-and-resources
+  - title: Frequently asked questions
+    href: /faq
 ---
-<div class="row">
-    <div class="span8">
-        {{ content }}
-    </div>
-    <div class="span4 sidebar">
-        <h4>Additional Information</h4>
-        <ul class="unstyled">
-            {% for link in page.links %}
-            <li>
-                <a href="{{ link.href }}">{{ link.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
 
-        <h4>Recent posts</h4>
-        <ul class="unstyled">
-            {% for post in site.posts limit:2 %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
+<div class="row">
+  <div class="span8">
+    {{ content }}
+  </div>
+  <div class="span4 sidebar">
+    <h4>Additional Information</h4>
+    <ul class="unstyled">
+      {% for link in layout.links %}
+      <li>
+        <a href="{{ link.href }}">{{ link.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h4>Recent posts</h4>
+    <ul class="unstyled">
+      {% for post in site.posts limit:2 %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
