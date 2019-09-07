@@ -171,6 +171,13 @@ footer {
   }
 }
 
+blockquote {
+  p {
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
 .testimonials {
   h3 {
     text-align: center;
@@ -181,8 +188,6 @@ footer {
   }
   blockquote {
     p {
-      font-size: 14px;
-      font-style: italic;
       text-indent: -0.4em;
       &:before {
         content: '“';
